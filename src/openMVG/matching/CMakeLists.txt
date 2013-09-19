@@ -19,5 +19,10 @@ list(REMOVE_ITEM matching_files_cpp ${REMOVEFILESUNITTEST})
 set_source_files_properties(${matching_files_header} PROPERTIES LANGUAGE CXX)
 set_source_files_properties(${matching_files_cpp} PROPERTIES LANGUAGE CXX)
 
+INSTALL(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+    DESTINATION include/openMVG
+    FILES_MATCHING PATTERN "*.hpp"
+    PATTERN "*_test.*" EXCLUDE)
+
 UNIT_TEST(openMVG matching "flann_cpp_s")
 UNIT_TEST(openMVG matching_filters "")

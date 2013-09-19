@@ -22,7 +22,7 @@ TARGET_LINK_LIBRARIES(openMVG_image png jpeg)
 INSTALL(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
     DESTINATION include/openMVG
     FILES_MATCHING PATTERN "*.hpp"
-    PATTERN "*_test" EXCLUDE)
+    PATTERN "*_test.*" EXCLUDE)
 INSTALL(TARGETS openMVG_image ARCHIVE DESTINATION lib)
 
 UNIT_TEST(openMVG image "openMVG_numeric;openMVG_image")
