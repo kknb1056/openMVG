@@ -9,6 +9,9 @@
 
 #include "openMVG/image/image_container.hpp"
 
+namespace openMVG
+{
+
 /// Horizontal concatenation of images
 template < class Image >
 void ConcatH(const Image & imageA, const Image & imageB, Image & Out)
@@ -50,5 +53,7 @@ void ConcatV(const Image & imageA, const Image & imageB, Image & Out)
     for(size_t j = 0; j < imageB.Height(); ++j)
       Out(j+offset,i) = imageB(j,i);
 }
+
+} // end of "namespace openMVG"
 
 #endif // OPENMVG_IMAGE_IMAGE_CONCAT_H_

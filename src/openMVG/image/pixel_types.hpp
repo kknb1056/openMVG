@@ -9,6 +9,9 @@
 
 #include "openMVG/numeric/numeric.h"
 
+namespace openMVG
+{
+
 /// RGB templated pixel type
 template <typename T>
 class Rgb : public Eigen::Matrix<T, 3, 1, 0, 3, 1>
@@ -137,6 +140,8 @@ const RGBColor GREEN(0,255,0);
 const RGBColor YELLOW(255,255,0);
 const RGBColor CYAN(0,255,255);
 const RGBColor MAGENTA(255,0,255);
+
+} // end of "namespace openMVG"
 
 #endif // OPENMVG_IMAGE_PIXELTYPES_HPP
 
